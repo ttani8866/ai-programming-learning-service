@@ -1,8 +1,5 @@
 "use client";
 
-// force vercel rebuild
-
-
 import React from "react";
 import {
   AppBar,
@@ -18,9 +15,8 @@ import {
   createTheme,
 } from "@mui/material";
 
-// ★ MUI Grid の正しい import（Vercel / Next.js / MUI 全環境で動く）
-import { Grid } from "@mui/material";
-
+// ★ MUI Grid の正しい import（Next.js + Vercel + MUI 全環境で動く）
+import Grid from "@mui/material/Unstable_Grid2";
 
 const theme = createTheme({
   typography: {
@@ -64,8 +60,9 @@ export default function LandingPage() {
       {/* Features */}
       <Container sx={{ py: 10 }}>
         <Grid container spacing={4}>
+          
           {/* Feature 1 */}
-          <Grid item xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <Card elevation={3}>
               <CardContent>
                 <Typography variant="h6" fontWeight={600}>
@@ -79,7 +76,7 @@ export default function LandingPage() {
           </Grid>
 
           {/* Feature 2 */}
-          <Grid item xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <Card elevation={3}>
               <CardContent>
                 <Typography variant="h6" fontWeight={600}>
@@ -93,7 +90,7 @@ export default function LandingPage() {
           </Grid>
 
           {/* Feature 3 */}
-          <Grid item xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <Card elevation={3}>
               <CardContent>
                 <Typography variant="h6" fontWeight={600}>
@@ -105,6 +102,7 @@ export default function LandingPage() {
               </CardContent>
             </Card>
           </Grid>
+
         </Grid>
       </Container>
 
