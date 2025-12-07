@@ -15,8 +15,8 @@ import {
   createTheme,
 } from "@mui/material";
 
-// MUI v7 の正しい Grid インポート
-import Grid from "@mui/material/Unstable_Grid2";
+// MUI v5 / v6 / v7 全部で安定動作する Grid
+import Grid from "@mui/material/Grid";
 
 const theme = createTheme({
   typography: {
@@ -54,9 +54,10 @@ export default function LandingPage() {
         </Button>
       </Container>
 
+      {/* Features */}
       <Container sx={{ py: 10 }}>
         <Grid container spacing={4}>
-          <Grid xs={12} md={4}>
+          <Grid item xs={12} md={4}>
             <Card elevation={3}>
               <CardContent>
                 <Typography variant="h6" fontWeight={600}>
@@ -69,7 +70,7 @@ export default function LandingPage() {
             </Card>
           </Grid>
 
-          <Grid xs={12} md={4}>
+          <Grid item xs={12} md={4}>
             <Card elevation={3}>
               <CardContent>
                 <Typography variant="h6" fontWeight={600}>
@@ -82,7 +83,7 @@ export default function LandingPage() {
             </Card>
           </Grid>
 
-          <Grid xs={12} md={4}>
+          <Grid item xs={12} md={4}>
             <Card elevation={3}>
               <CardContent>
                 <Typography variant="h6" fontWeight={600}>
