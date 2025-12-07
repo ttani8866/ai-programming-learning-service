@@ -29,7 +29,6 @@ export default function LandingPage() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
-      {/* Header */}
       <AppBar position="static" color="transparent" elevation={0}>
         <Toolbar>
           <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 700 }}>
@@ -41,7 +40,6 @@ export default function LandingPage() {
         </Toolbar>
       </AppBar>
 
-      {/* Hero */}
       <Container maxWidth="md" sx={{ textAlign: "center", py: 10 }}>
         <Typography variant="h3" fontWeight={700} gutterBottom>
           AIがあなたのコードを<br />24時間レビュー
@@ -56,7 +54,6 @@ export default function LandingPage() {
         </Button>
       </Container>
 
-      {/* Features */}
       <Container sx={{ py: 10 }}>
         <Grid container spacing={4}>
           <Grid xs={12} md={4}>
@@ -100,7 +97,6 @@ export default function LandingPage() {
         </Grid>
       </Container>
 
-      {/* Footer */}
       <Box sx={{ py: 5, textAlign: "center", bgcolor: "#f5f5f5" }}>
         <Typography variant="body2" color="text.secondary">
           © 2025 SurviveAI All Rights Reserved.
